@@ -1,6 +1,6 @@
 Kotlin Google Maps Location Estimation
 
-✔ Google Maps
+✔ Google Maps<br/>
 ✔ Geooder
 
 ![image1](https://user-images.githubusercontent.com/36104238/117504197-c1668080-af8a-11eb-8382-d1051fbe76be.png)
