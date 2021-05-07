@@ -3,7 +3,7 @@ Kotlin Google Maps Location Estimation
 ✔ Google Maps<br/>
 ✔ Geooder<br/>
 
-📍 "kotlin-google-maps-location-estimation/app/src/release/res/values/google_maps_api.xml" içerisine kendi "YOUR_KEY_HERE" anahtarınızı yazmayı unutmayınız.
+📍 "kotlin-google-maps-location-estimation/app/src/debug/res/values/google_maps_api.xml" içerisine kendi "YOUR_KEY_HERE" anahtarınızı yazmayı unutmayınız.
 
 ![image1](https://user-images.githubusercontent.com/36104238/117504197-c1668080-af8a-11eb-8382-d1051fbe76be.png)
 
