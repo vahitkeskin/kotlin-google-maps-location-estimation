@@ -49,9 +49,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         locationListener = object: LocationListener {
             override fun onLocationChanged(location: Location) {
                 val userNewLatLng = LatLng(location.latitude, location.longitude)
+                mMap.clear()
                 mMap.addMarker(MarkerOptions().position(userNewLatLng).title("onLocationChanged"))
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userNewLatLng,15f))
-                //estimationLocation(location)
+                estimationLocation(location.latitude, location.longitude)
             }
 
             override fun onProviderEnabled(provider: String) {
@@ -78,6 +79,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             val lastLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
             lastLocation?.let {l1 ->
                 val lastKnowLocation = LatLng(l1.latitude, l1.longitude)
+                mMap.clear()
                 mMap.addMarker(MarkerOptions().position(lastKnowLocation).title("Last Location"))
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lastKnowLocation,15f))
 
@@ -138,7 +140,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     finish()
                 }
                 alert.setNegativeButton("No") {dialog, witch ->
-                    true
+                    mMap.clear()
                 }
                 alert.show()
 
